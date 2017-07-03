@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Hockey National Teams</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Evgeni Malkin</string>
+    <string name="slide_1_desc">The official National Hockey League website including news, rosters, stats, schedules, teams, and video.</string>
+
+    <string name="slide_2_title">Vladimir Tarasenko</string>
+    <string name="slide_2_desc">The official National Hockey League website including news, rosters, stats, schedules, teams, and video.</string>
+
+    <string name="slide_3_title">Nikita Kucherov</string>
+    <string name="slide_3_desc">The official National Hockey League website including news, rosters, stats, schedules, teams, and video.</string>
+
+</resources>
