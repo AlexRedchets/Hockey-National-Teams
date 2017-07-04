@@ -106,7 +106,7 @@ public class IntroActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        startActivity(new Intent(IntroActivity.this, MainActivity.class));
+        startActivity(new Intent(IntroActivity.this, LoginActivity.class));
         finish();
     }
 
@@ -120,11 +120,11 @@ public class IntroActivity extends AppCompatActivity {
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
-                mNextButton.setText(getString(R.string.start));
+                mNextButton.setText(getString(R.string.start_button));
                 mSkipButton.setVisibility(View.GONE);
             } else {
                 // still pages are left
-                mNextButton.setText(getString(R.string.next));
+                mNextButton.setText(getString(R.string.next_button));
                 mSkipButton.setVisibility(View.VISIBLE);
             }
         }
