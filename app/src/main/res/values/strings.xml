@@ -23,6 +23,12 @@
     <string name="reenter_password">re-enter password</string>
     <string name="sign_in_button">sign in</string>
     <string name="sign_up_button">sign up</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 
 </resources>

@@ -11,26 +11,22 @@ import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private static final String TAG = LoginActivity.class.getName();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.i(TAG, "onCreate");
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.sign_in_button)
+    @OnClick(R.id.button_login_sign_in)
     public void signInClicked(View view) {
         Intent i = new Intent(this, IntroActivity.class);
         startActivity(i);
         finish();
     }
 
-    @OnClick(R.id.sign_up_button)
+    @OnClick(R.id.button_login_sign_up)
     public void signUpClicked(View view) {
         Intent i = new Intent(this, SignUpActivity.class);
         startActivity(i);
