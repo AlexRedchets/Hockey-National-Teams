@@ -31,6 +31,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frame_main, new TeamFragment(), "TeamFragment")
+                    .commit();
+        }
+        else{
+            getSupportFragmentManager()
+                    .findFragmentByTag("TeamFragment");
+        }
     }
 
     @Override
