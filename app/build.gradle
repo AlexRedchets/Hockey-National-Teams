@@ -54,4 +54,6 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
 
+    //TImber
+    compile 'com.jakewharton.timber:timber:4.5.1'
 }
