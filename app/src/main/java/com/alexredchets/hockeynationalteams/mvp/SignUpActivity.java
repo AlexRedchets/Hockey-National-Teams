@@ -8,11 +8,13 @@ import com.alexredchets.hockeynationalteams.R;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import timber.log.Timber;
 
 public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Timber.i("onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 

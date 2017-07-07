@@ -21,6 +21,7 @@ import com.alexredchets.hockeynationalteams.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import timber.log.Timber;
 
 public class IntroActivity extends AppCompatActivity {
 
@@ -34,6 +35,7 @@ public class IntroActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Timber.i("onCreate");
         super.onCreate(savedInstanceState);
 
         // Making notification bar transparent

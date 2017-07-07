@@ -10,10 +10,13 @@ import android.view.ViewGroup;
 import com.alexredchets.hockeynationalteams.App;
 import com.alexredchets.hockeynationalteams.R;
 
+import timber.log.Timber;
+
 public class TeamFragment extends Fragment implements TeamInterface.TeamFragmentInterface {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+        Timber.i("onCreate");
         super.onCreate(savedInstanceState);
 
         ((App)getActivity()
