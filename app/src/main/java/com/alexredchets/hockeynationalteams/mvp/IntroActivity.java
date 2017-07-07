@@ -1,4 +1,4 @@
-package com.alexredchets.hockeynationalteams;
+package com.alexredchets.hockeynationalteams.mvp;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,6 +15,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.alexredchets.hockeynationalteams.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
