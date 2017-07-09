@@ -46,7 +46,7 @@ public class App extends Application {
 
         mAppComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this,
-                        "sdf"))
+                        "http://104.131.37.13:3000/"))
                 .build();
         return mAppComponent;
 
