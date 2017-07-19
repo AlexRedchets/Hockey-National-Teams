@@ -1,7 +1,5 @@
 package com.alexredchets.hockeynationalteams.mvp;
 
-import android.util.Log;
-
 import com.alexredchets.hockeynationalteams.PlayerClient;
 
 import javax.inject.Inject;
