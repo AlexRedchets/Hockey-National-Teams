@@ -1,7 +1,7 @@
 package com.alexredchets.hockeynationalteams.injection.modules;
 
 import com.alexredchets.hockeynationalteams.injection.scopes.PerActivity;
-import com.alexredchets.hockeynationalteams.mvp.TeamInterface;
+import com.alexredchets.hockeynationalteams.mvp.team.TeamInterface;
 
 import dagger.Module;
 import dagger.Provides;

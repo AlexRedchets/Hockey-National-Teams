@@ -1,4 +1,4 @@
-package com.alexredchets.hockeynationalteams.mvp;
+package com.alexredchets.hockeynationalteams.mvp.team;
 
 import android.content.res.Resources;
 import android.graphics.Rect;

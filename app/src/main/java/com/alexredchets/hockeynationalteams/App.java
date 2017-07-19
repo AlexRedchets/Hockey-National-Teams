@@ -7,7 +7,7 @@ import com.alexredchets.hockeynationalteams.injection.components.DaggerAppCompon
 import com.alexredchets.hockeynationalteams.injection.components.TeamComponent;
 import com.alexredchets.hockeynationalteams.injection.modules.AppModule;
 import com.alexredchets.hockeynationalteams.injection.modules.TeamModule;
-import com.alexredchets.hockeynationalteams.mvp.TeamInterface;
+import com.alexredchets.hockeynationalteams.mvp.team.TeamInterface;
 
 import timber.log.Timber;
 

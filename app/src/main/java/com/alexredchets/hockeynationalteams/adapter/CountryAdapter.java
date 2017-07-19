@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.alexredchets.hockeynationalteams.R;
 import com.alexredchets.hockeynationalteams.model.Country;
-import com.alexredchets.hockeynationalteams.model.Player;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -75,12 +74,12 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
 
         @Override
         public void onClick(View view) {
-            clickListener.onClick(playerList.get(getAdapterPosition()));
+            clickListener.onClick(countryList.get(getAdapterPosition()));
         }
     }
 
     public interface ClickListener {
-        void onClick(Player player);
+        void onClick(Country country);
     }
 
 }
