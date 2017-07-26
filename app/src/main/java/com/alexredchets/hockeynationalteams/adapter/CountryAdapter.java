@@ -49,7 +49,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         holder.mTextCountryName.setText(country.getName());
         Picasso
                 .with(context)
-                .load(country.getImg_header())
+                .load(country.getFlag())
                 .into(holder.mImgCountry);
     }
 

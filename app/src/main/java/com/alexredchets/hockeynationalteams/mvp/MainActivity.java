@@ -11,11 +11,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.alexredchets.hockeynationalteams.R;
+import com.alexredchets.hockeynationalteams.mvp.country.CountryFragment;
 import com.alexredchets.hockeynationalteams.mvp.team.TeamFragment;
 
 import timber.log.Timber;
 
-public class MainActivity extends AppCompatActivity
+public class   MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -37,12 +38,12 @@ public class MainActivity extends AppCompatActivity
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.frame_main, new TeamFragment(), "TeamFragment")
+                    .replace(R.id.frame_main, new CountryFragment(), "CountryFragment")
                     .commit();
         }
         else{
             getSupportFragmentManager()
-                    .findFragmentByTag("TeamFragment");
+                    .findFragmentByTag("CountryFragment");
         }
     }
 

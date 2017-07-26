@@ -12,7 +12,9 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.alexredchets.hockeynationalteams.App;
 import com.alexredchets.hockeynationalteams.R;
 import com.alexredchets.hockeynationalteams.adapter.CountryAdapter;
 import com.alexredchets.hockeynationalteams.model.Country;
@@ -23,6 +25,7 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import timber.log.Timber;
 
 public class CountryFragment extends Fragment implements CountryInterface.CountryFragmentInterface, CountryAdapter.ClickListener {
 
@@ -30,6 +33,17 @@ public class CountryFragment extends Fragment implements CountryInterface.Countr
     @Inject CountryPresenter mPresenter;
 
     private CountryAdapter mAdapter;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        Timber.i("onCreate");
+        super.onCreate(savedInstanceState);
+
+        ((App)getActivity()
+                .getApplication())
+                .provideCountryComponent(this)
+                .inject(this);
+    }
 
     @Nullable
     @Override
@@ -49,18 +63,32 @@ public class CountryFragment extends Fragment implements CountryInterface.Countr
     }
 
     @Override
-    public void onClick(Country country) {
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mPresenter.fetchData();
+    }
 
+    @Override
+    public void onClick(Country country) {
+        Toast.makeText(getContext(), country.getName(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onComplete(List<Country> countryList) {
-
+        mAdapter.updateAdapter(countryList);
     }
 
     @Override
     public void onError(String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
+    }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        ((App)getActivity()
+                .getApplication())
+                .releaseCountryComponent();
     }
 
     /**
