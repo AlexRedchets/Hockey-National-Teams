@@ -13,7 +13,5 @@ public interface PlayerClient {
     @GET("/api/player/{team}")
     Observable<List<Player>> getPlayers(
             @Path("team") String team
-
     );
-
 }

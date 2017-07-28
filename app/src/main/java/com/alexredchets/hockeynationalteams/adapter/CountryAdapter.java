@@ -81,5 +81,4 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
     public interface ClickListener {
         void onClick(Country country);
     }
-
 }

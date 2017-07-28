@@ -69,11 +69,6 @@ public class CountryFragment extends Fragment implements CountryInterface.Countr
     }
 
     @Override
-    public void onClick(Country country) {
-        Toast.makeText(getContext(), country.getName(), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
     public void onComplete(List<Country> countryList) {
         mAdapter.updateAdapter(countryList);
     }
@@ -89,6 +84,11 @@ public class CountryFragment extends Fragment implements CountryInterface.Countr
         ((App)getActivity()
                 .getApplication())
                 .releaseCountryComponent();
+    }
+
+    @Override
+    public void onClick(Country country) {
+        Toast.makeText(getContext(), country.getName(), Toast.LENGTH_SHORT).show();
     }
 
     /**
